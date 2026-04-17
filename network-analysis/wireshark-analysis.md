@@ -44,4 +44,10 @@ This project demonstrates how packet-level analysis can be used to identify pote
 * Packet inspection
 * Threat identification
 * Use of Wireshark for monitoring
+## Evidence
 
+### Packet Capture Overview
+![Overview](screenshots/wireshark-overview.png)
+
+### DNS Traffic Analysis
+![DNS Filter](../screenshots/wireshark-dns-filter.png)
