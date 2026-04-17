@@ -23,12 +23,16 @@ To analyse captured network traffic and identify suspicious or potentially malic
 
 ## Analysis & Findings
 
-During the analysis, the following observations were made:
+During the analysis, DNS traffic was isolated using Wireshark display filters. The capture revealed multiple DNS queries and responses to external domains, including services associated with Microsoft and cloud infrastructure providers.
 
-* Repeated DNS queries to external domains
-* Multiple HTTP requests to unknown or unverified servers
-* Unusual traffic patterns that may indicate suspicious behaviour
-* Potential indicators of abnormal network communication
+Key observations include:
+
+- Frequent DNS queries to external domains such as Microsoft-related services, indicating normal system background activity.
+- Presence of multicast DNS (mDNS) traffic, commonly used for local network service discovery.
+- Encrypted traffic protocols such as TLS and QUIC observed in the broader capture, indicating secure communications.
+- TCP reset (RST) packets detected, suggesting normal connection termination behaviour rather than malicious activity.
+
+No clear indicators of compromise were identified; however, the analysis demonstrates how unusual patterns or unknown domains could be flagged for further investigation in a real-world SOC environment.
 
 ---
 
